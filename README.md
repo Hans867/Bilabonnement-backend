@@ -15,7 +15,7 @@ PUT /api/cars/{id}: Update an existing movie
 DELETE /api/cars/{id}: Delete a movie
 <br>
 
-Samme struktur gælder for følgende endpoints:
+Samme struktur gælder for følgende endpoints (indsættes i stedet for "cars"):
 <br>
 ### customers, damages & subscriptions.
 
