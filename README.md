@@ -17,7 +17,7 @@ DELETE /api/cars/{id}: Delete a movie
 
 Samme struktur gælder for følgende endpoints 
 <br>
-####(indsættes i stedet for "cars"):
+#### (indsættes i stedet for "cars"):
 <br>
 ### customers, damages & subscriptions.
 
