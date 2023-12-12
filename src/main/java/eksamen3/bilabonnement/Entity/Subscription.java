@@ -18,10 +18,6 @@ public class Subscription {
     private Car car;
 
     @ManyToOne
-    @JoinColumn(name = "damage_id", nullable = false)
-    private Damage damage;
-
-    @ManyToOne
     @JoinColumn(name = "customer_username", nullable = false)
     private Customer customer;
 
@@ -66,7 +62,7 @@ public class Subscription {
 
     public Subscription(String datePurchased, String startSubscriptionDate, String endSubscriptionDate, String deliveryDate,
                         int kmDrivenSubscriptionStart, int subscriptionDrivenKm, int agreedKmSubscription, int subscriptionPeriode,
-                        int subscriptionPriceEachMonth, String pickupCarPlace, String returnCarPlace, Car car, Damage damage, Customer customer) {
+                        int subscriptionPriceEachMonth, String pickupCarPlace, String returnCarPlace, Car car, Customer customer) {
         this.datePurchased = datePurchased;
         this.startSubscriptionDate = startSubscriptionDate;
         this.endSubscriptionDate = endSubscriptionDate;
@@ -79,7 +75,6 @@ public class Subscription {
         this.pickupCarPlace = pickupCarPlace;
         this.returnCarPlace = returnCarPlace;
         this.car = car;
-        this.damage = damage;
         this.customer = customer;
     }
 
@@ -102,14 +97,6 @@ public class Subscription {
 
     public void setCar(Car car) {
         this.car = car;
-    }
-
-    public Damage getDamage() {
-        return damage;
-    }
-
-    public void setDamage(Damage damage) {
-        this.damage = damage;
     }
 
     public Customer getCustomer() {
