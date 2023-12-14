@@ -39,14 +39,14 @@ public class DamageController {
 
     // Create
     @PostMapping
-    public ResponseEntity<Damage> createCustomer(@RequestBody Damage damage) {
+    public ResponseEntity<Damage> createDamage(@RequestBody Damage damage) {
         Damage savedDamage = damageRepository.save(damage);
         return ResponseEntity.ok(savedDamage);
     }
 
     // Update
     @PutMapping("/{id}")
-    public ResponseEntity<Damage> updateCustomer(@PathVariable long id, @RequestBody Damage damage) {
+    public ResponseEntity<Damage> updateDamage(@PathVariable long id, @RequestBody Damage damage) {
         if (damageRepository.existsById(id)) {
             Damage updatedDamage = damageRepository.save(damage);
             return ResponseEntity.ok(updatedDamage);

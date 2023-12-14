@@ -22,16 +22,20 @@ public class Car {
     @Column(name = "car_fuel", length = 50,nullable = false)
     private String carFuel;
 
+    @Column(name = "car_image_url")
+    private String imageUrl;
+
     @CreationTimestamp
     @Column(updatable = false)
     private LocalDateTime created;
     @UpdateTimestamp
     private LocalDateTime lastEdited;
 
-    public Car(String brand, int purchasePrice, String carFuel ) {
+    public Car(String brand, int purchasePrice, String carFuel, String imageUrl ) {
         this.brand = brand;
         this.purchasePrice = purchasePrice;
         this.carFuel = carFuel;
+        this.imageUrl = imageUrl;
     }
 
     public Car () {
@@ -68,6 +72,14 @@ public class Car {
 
     public void setCarFuel(String carFuel) {
         this.carFuel = carFuel;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public LocalDateTime getCreated() {
